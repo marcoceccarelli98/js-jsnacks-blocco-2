@@ -10,7 +10,7 @@ let array2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let array1Minore = false;
 let lenghtDifference = 0;
 
-//Stabilisco l'array più corto
+//Stabilisco l'array più corto e calcolo la differenza tra i due array
 if (array1.length < array2.length) {
     array1Minore = true;
     lenghtDifference = array2.length - array1.length;
@@ -19,6 +19,7 @@ if (array1.length < array2.length) {
     lenghtDifference = array1.length - array2.length;
 }
 
+//Aggiungo numeri casuali all'array minore
 for (let i = 0; i < lenghtDifference; i++) {
     if (array1Minore) {
         array1.push(Math.floor(Math.random() * 100));
