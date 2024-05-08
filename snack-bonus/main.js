@@ -11,10 +11,13 @@ console.log(inserisciInTesta(testArray, element));
 // ---------
 
 function inserisciInTesta(arrayA, E) {
+    //aggiungo subito l'elemento in testa all'array B
     let arrayB = [E];
+    //copio l'arrayA nell'arrayB shiftando di una posizione
     for (let i = 1; i < contaElementi(arrayA); i++) {
         arrayB[i] = arrayA[i - 1];
     }
+    //aggiungo l'ultimo elemento all'array B
     arrayB[contaElementi(arrayB)] = arrayA[contaElementi(arrayA) - 1];
     return arrayB;
 }
